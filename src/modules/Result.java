@@ -9,20 +9,17 @@ public class Result implements Serializable {
     private Double r;
     private boolean result;
 
-    public Result(){
-
-    }
 
     public Double getX(){
-        return this.x;
+        return x;
     }
 
     public Double getY(){
-        return this.y;
+        return y;
     }
 
     public Double getR(){
-        return this.r;
+        return r;
     }
 
     public boolean isResult() {
@@ -41,8 +38,8 @@ public class Result implements Serializable {
         this.r=r;
     }
 
-    public void setResult(boolean res) {
-        this.result=res;
+    public void setResult(boolean result) {
+        this.result=result;
     }
 
 
