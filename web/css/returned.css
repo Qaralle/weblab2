@@ -1,0 +1,71 @@
+body{
+    background-color: gray;
+    background-size: 50%;
+    background-repeat: space;
+
+}
+div.head{
+
+    text-align: center;
+    font-family: "serif"; /*Каскодирование, правило задающее стиль непосредственно элементу «не конкурент»
+    							 правилу унаследованное от родительского элемента, он всегда важнее.*/
+    font-size: 50px;
+    color: black;
+    font-weight:bold;
+
+    border:2px solid white;
+    border-radius: 10px;
+
+}
+#body_div{
+    font-family: "courier new", serif; /*Наследование
+								шрифт и размер*/
+    font-size: 15px;
+
+    background: #0078c9;
+    padding: 5px;
+    opacity: 0.85;
+
+    width: 750px;
+    margin: auto;
+
+    border:2px solid white;
+    border-radius: 10px;
+}
+table.result{
+    border: 1px solid white;
+    width: 100%;
+    border-collapse: collapse;
+    text-align:center;
+    font-size: 15px;
+    table-layout: fixed;
+
+}
+table.result td{
+    border: 1px solid white;
+}
+
+div.cell{
+
+    width: 100%;
+    overflow: auto;
+}
+
+table.result tr {
+    border: 1px solid white;
+}
+table.result > thead{ /* Селектор потомков*/
+    font-size: 20px;
+    font-weight:bold;
+}
+#table_div {
+    margin: 10px auto auto;
+}
+
+#submit_button{
+    border:2px solid white;
+    border-radius: 10px;
+    background-color: lightgray;
+    width: 750px;
+    margin: 20px auto auto;
+}
