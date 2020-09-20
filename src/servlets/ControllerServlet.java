@@ -33,7 +33,7 @@ public class ControllerServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/main_page.jsp").forward(req, resp);
+        getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
     }
 
     @Override

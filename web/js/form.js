@@ -1,3 +1,13 @@
+$(function () {
+    validate()
+    $('#input_y').keypress(function (event) {
+        if (event.which == '13') {
+            event.preventDefault()
+        }
+    })
+
+});
+
 function isANumber( n ) {
 	const NUMSTR = /^[\-]?\d*\.?\d+(?:[Ee][+\-]?\d+)?$|\.$/;
 	return NUMSTR.test(n);
@@ -23,6 +33,16 @@ function validate() {
 
 $("#submit_button").on("click",()=>{
 
+
+    $("#input_y")[0].value=$("#input_y")[0].value.replace(',','.')
+    if(parseFloat($("#input_y")[0].value) !== 0) {
+        $("#input_y")[0].value = $("#input_y")[0].value.replace(/^0+/, "0")
+        $("#input_y")[0].value = $("#input_y")[0].value.replace(/0+$/, "")
+    }
+    if(parseFloat($("#input_x")[0].value) !== 0) {
+        $("#input_x")[0].value = $("#input_x")[0].value.replace(/0+$/, "")
+    }
+
     localStorage.clear()
     let counter=0;
     let checked = []
@@ -33,5 +53,7 @@ $("#submit_button").on("click",()=>{
         }
     }
     localStorage.setItem("R",JSON.stringify(checked))
-})
 
+    $("#testform").submit()
+
+})

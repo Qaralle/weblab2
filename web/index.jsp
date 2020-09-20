@@ -42,7 +42,7 @@
       </select><br />
 
       <label for="input_y">Y</label>
-      <input class="custom-class" serialize="true" id="input_y" type="text" name="Y"  oninput="validate()" onchange="validate()" ><br />
+      <input class="custom-class" serialize="true" id="input_y" type="text" name="Y" maxlength="15" oninput="validate()" onchange="validate()" ><br />
 
       <label for="first_input_r">R</label>
 
@@ -52,7 +52,7 @@
       <input type="checkbox" name="R" value="2.5" onchange="validate()">2.5
       <input type="checkbox" name="R" value="3" onchange="validate()">3<br />
 
-      <button id="submit_button" type="submit" disabled>Submit</button>
+      <input id="submit_button" type="button" disabled value="Отправить">
 
 
     </form>
