@@ -40,7 +40,7 @@ $("#submit_button").on("click",()=>{
         $("#input_y")[0].value = $("#input_y")[0].value.replace(/0+$/, "")
     }
     if(parseFloat($("#input_x")[0].value) !== 0) {
-        $("#input_x")[0].value = $("#input_x")[0].value.replace(/0+$/, "")
+        $("#input_x").append(`<option selected value="${$("#input_x")[0].value.replace(/0+$/, "")}">${$("#input_x")[0].value.replace(/0+$/, "")}</option>`);
     }
 
     localStorage.clear()

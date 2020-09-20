@@ -211,6 +211,9 @@ function clickPoint(event){
 			$("#input_x").append(`<option selected value="${x.toFixed(5).toString()}">${x.toFixed(5).toString()}</option>`);
 			$("#input_y")[0].value=y.toFixed(10).toString()
 
+			console.log(x+"    "+ y)
+			console.log($("#input_x"))
+
 
 			$("#submit_button")[0].disabled=false
 			$("#submit_button")[0].click()
