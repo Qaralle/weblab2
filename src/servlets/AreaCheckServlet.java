@@ -139,16 +139,6 @@ public class AreaCheckServlet extends HttpServlet {
         return true;
     }
 
-    public boolean checkTheArea(Result result) {
-        if (result.getX() > 0 && result.getY() < 0) {
-            return false;
-        } else if ((result.getX() <= 0 && result.getY() <= 0) && (result.getX() >= -result.getR()) && (result.getY() >=- result.getR())) {
-            return true;
-        } else if (result.getX() >= 0 && result.getY() >= 0 && (result.getY() <= -2*result.getX() + result.getR())) {
-            return true;
-        } else return((result.getX() <= 0 && result.getY() >= 0 && (pow(result.getX(),2) + pow(result.getY(),2)<=pow(result.getR()/2,2))));
-    }
-
 
 
     private double[] getArrayFromParams(String[] params){
@@ -188,7 +178,7 @@ public class AreaCheckServlet extends HttpServlet {
             res.setR(r);
             res.setX(x);
             res.setY(y);
-            res.setResult(checkTheArea(res));
+            res.checkTheArea();
 
             results.add(res);
             session.setAttribute("results", results);
